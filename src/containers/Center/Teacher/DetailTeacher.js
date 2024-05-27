@@ -12,7 +12,7 @@ class DetailTeacher extends Component {
         this.state = {
             detailTeacher: '',
             currentTeacherId: -1
-        }
+        }       
     }
 
 
@@ -83,7 +83,7 @@ class DetailTeacher extends Component {
                             </div> */}
                             <div className='down pt-3'>
                                
-                                <p class="w3-serif">
+                                <p className="w3-serif">
                                      Chúng tôi tự hào giới thiệu cô {this.state.detailTeacher.TeacherName}, một giáo viên tiếng Anh giàu kinh nghiệm tại Trung tâm Anh ngữ SLC. Cô tốt nghiệp Cử nhân Sư Phạm Anh tại Đại học Hồng Đức có kinh nghiệm dạy tiếng anh tại nhiều trung tâm lớn.
                                 Với phương pháp giảng dạy sáng tạo và nhiệt huyết,  cô {this.state.detailTeacher.TeacherName}luôn tạo ra những giờ học thú vị và hiệu quả. Cô không chỉ giúp học viên nâng cao kỹ năng ngôn ngữ mà còn khuyến khích sự tự tin và yêu thích học tiếng Anh
                                 </p>

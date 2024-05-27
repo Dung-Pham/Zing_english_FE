@@ -36,7 +36,7 @@ class OutStandingTeacher extends Component {
     handleViewDetailTeacher = (teacher) => {
         if (this.props.history) {
             //fix
-            this.props.history.push(`/detail-teacher/${teacher.TeacherId}`)
+            this.props.history.push(`/detail-teacher/${teacher.UserId}`)
         }
     }
     handleViewTeacherMore = () => {
