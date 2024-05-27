@@ -6,7 +6,7 @@ $font-family_1: var(--font-ubuntu);
 .tag-event {
 	position: relative;
 	background-color: rgb(255, 255, 255);
-	width: 345px;
+	width: 245px;
 	height: 110px;
 	display: flex;
 	flex-direction: row;
@@ -25,8 +25,8 @@ $font-family_1: var(--font-ubuntu);
         
 		.img-event-content {
             border-radius: 100%;
-			width: 90px;
-			height: 90px;
+			width: 60px;
+			height: 60px;
 			object-fit: cover;
 		}
 

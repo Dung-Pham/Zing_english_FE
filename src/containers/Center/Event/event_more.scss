@@ -7,7 +7,7 @@
     .event-more-container{
         display:flex;
         flex-direction: column;
-        width: 1320px;
+        // width: 1320px;
         margin: 50px 50px;
         gap: 50px;
         .header{ 
@@ -16,7 +16,7 @@
             b {
                 font-family: "Lexend Deca", sans-serif;
                 color:var(--color-steelblue);
-                font-size: 45px;
+                font-size: 30px;
                 font-weight: 700;
             }
         }
