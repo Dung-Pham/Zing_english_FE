@@ -5,8 +5,8 @@ let getUserFromTeacher= (id)=>{
     return axios.get(`api/get-user-from-teacher?id=${id}`)
 }
 
-let getTopTeacher = (inputId) => {
-    return axios.get(`api/get-top-teachers?id=${inputId}`)
+let getTopTeacher = () => {
+    return axios.get(`api/get-top-teachers`)
 }
 let getAllTeachers=()=>{
     return axios.get("/api/get-all-teachers");
