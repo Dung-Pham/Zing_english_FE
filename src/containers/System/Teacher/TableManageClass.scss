@@ -1,0 +1,27 @@
+#TableManageClass {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#TableManageClass td,
+#TableManageClass th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#TableManageClass tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#TableManageClass tr:hover {
+    background-color: #ddd;
+}
+
+#TableManageClass th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}

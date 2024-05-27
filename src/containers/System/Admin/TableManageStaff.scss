@@ -1,0 +1,27 @@
+#TableManageStaff {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#TableManageStaff td,
+#TableManageStaff th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#TableManageStaff tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#TableManageStaff tr:hover {
+    background-color: #ddd;
+}
+
+#TableManageStaff th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
