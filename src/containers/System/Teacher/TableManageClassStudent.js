@@ -23,6 +23,8 @@ class TableManageClassStudent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            SelectClass:'',
+            arrClassStudent:[],
             isOpenModalUser:false,
             isOpenModalEditUser:false,
             arrClass: [],
@@ -56,6 +58,7 @@ class TableManageClassStudent extends Component {
                 studentRedux: this.props.students,
             })
         }
+        
     }
     getTeacherId= async ()=>{
         let { userInfo } = this.props
@@ -69,17 +72,18 @@ class TableManageClassStudent extends Component {
             this.state.TeacherName= teacher.data.TeacherName;
             //let teacherId= 1;
             let res = await getClassById(teacherId);
-            console.log(teacherId);
+            //console.log(teacherId);
             if (res && res.errCode == 0) {
                 this.setState({
                     arrClass: res.data
                 })
             }
-            let classCurent= this.state.arrClass[0];
-            let res2= await getStudentByClassId(classCurent.ClassId);
+            //let classCurent= this.state.arrClass[0];
+            let res2= await getStudentByClassId(this.state.SelectClass);
+                //classCurent.ClassId);
             this.setState({
-                ClassId: classCurent.ClassId,
-                studentsClass : this.props.students.filter(item => item.ClassId==classCurent.ClassId)
+                ClassId: this.state.arrClass[0].ClassId,
+                studentsClass : this.props.students.filter(item => item.ClassId== this.state.arrClass[0].ClassId)//classCurent.ClassId)
             })
             console.log(this.props.students);
             // if ( res2 && res2.errCode==0)
@@ -212,14 +216,28 @@ class TableManageClassStudent extends Component {
           })
     }
 
+    handleChangeInput = (e, id) => {
+        let copyState = { ...this.state }
+        copyState[id] = e.target.value
+        this.setState({
+            ...copyState
+        })
+        //console.log('selected class',e.target.value)
+        this.setState({
+            ClassId: e.target.value,
+            studentsClass : this.props.students.filter(item => item.ClassId==e.target.value)//classCurent.ClassId)
+        })
+    }
+
+
 
     render() {
         let  arrClass = this.state. arrClass;
         let studentsClass= this.state.studentsClass;
-        //console.log("check class", arrClass);
+        console.log("check class", this.state.SelectClass);
         return (
             <React.Fragment>
-                 <div className='manage-class-containner'>
+            <div className='manage-class-containner'>
                 <div className='m-s-title'>
                     Quản lí lớp học
                 </div>
@@ -238,6 +256,22 @@ class TableManageClassStudent extends Component {
 					user={this.state}
 					
                 />}
+                <div>
+                    Chọn lớp học đang phụ trách :<br></br>
+                <select id="options" value={this.state.SelectClass} onChange={(e) => { this.handleChangeInput(e, 'SelectClass') }}>
+                    {arrClass && arrClass.length> 0 &&
+                        arrClass.map((item, index)=>{
+                            return(
+                                <option value={item.ClassId}>
+                                    {item.ClassName}
+                                </option>
+                            )
+                        })
+                    }
+                    
+                
+                </select>
+                </div>
                 <div className='mx-1 text-center'>
                     		<button
                         	className='btn btn-primary px-3'

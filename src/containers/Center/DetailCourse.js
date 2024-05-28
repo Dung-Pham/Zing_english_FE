@@ -6,7 +6,6 @@ import { getDetailCourse } from '../../services/userService'
 import HomeFooter from '../HomePage/HomeFooter'
 import { Button } from 'reactstrap';
 import RegisterModal from './RegisterModal';
-import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
 class DetailCourse extends Component {
 
     constructor(props) {
@@ -61,16 +60,14 @@ class DetailCourse extends Component {
             <div>
                 {/* section-featured */}
                 <HomeHeader isShowBanner={false} />
-                <div className='detail-handbook-container '//style={{background:"#dde7f5"}}
-                    style={{ backgroundImage: "url(https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/369959700_1306176120261447_4267985031748171496_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyj44jQWsHK5EVreryU-8O8r18cki2d8ryvXxySLZ3ynTzut_BCZcfZM7-6GADeHvc1tpovF28kSXNSPmrVQLC&_nc_ohc=N3UnXGRBBEIQ7kNvgG84NIS&_nc_ht=scontent.fhan2-5.fna&oh=00_AYCkXA8mD6R8G3HgQVLwejwYyINCmRFkAMr_JAT7eWxfqg&oe=6653ACAC)" }}
+                <div className='detail-course-container '//style={{background:"#dde7f5"}}
+                    style={{ backgroundImage: "url('./../assets/header-background.jpg')" }}
                 >
                     {/* ===========================================================================      */}
-                    <div className="section-featured featured-image " style={ {height:"100px", backgroundImage: "url(https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/369959700_1306176120261447_4267985031748171496_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyj44jQWsHK5EVreryU-8O8r18cki2d8ryvXxySLZ3ynTzut_BCZcfZM7-6GADeHvc1tpovF28kSXNSPmrVQLC&_nc_ohc=N3UnXGRBBEIQ7kNvgG84NIS&_nc_ht=scontent.fhan2-5.fna&oh=00_AYCkXA8mD6R8G3HgQVLwejwYyINCmRFkAMr_JAT7eWxfqg&oe=6653ACAC)" }}>
-                    
-                    </div>
+                  
                     {/* ===================================== */}
                     <div className="section-post wrap">
-                        <div className="post-wrap " style={{background:"white"}}>
+                        <div className="post-wrap " style={{background:"#ebe2e2"}}>
                             <h1 className="white">{detailCourse.CourseName}</h1>
                             <p  class="w3-serif" >{detailCourse.Description}</p>
                             <div className=''> Thời lượng khóa học :  6 tháng</div>

@@ -50,13 +50,13 @@ class HomeFooter extends Component {
                         </div>
                         <div className='description'>
                             <p className="txt">
-                             Phương pháp đào tạo bài bản chất lượng
+                             Phương pháp đào tạo bài bản
                             </p>
                             <p className="txt">
                             Đăng kí khóa học dễ dàng
                             </p>
                             <p className="txt">
-                            Địa chỉ : Số nhà 54 , tổ 5 thị Trấn Cẩm Thủ Thanh Hóa
+                            Địa chỉ : Thị Trấn Phong Sơn, Cẩm Thủy, Thanh Hóa
                             </p>
                         </div>
                     </div>

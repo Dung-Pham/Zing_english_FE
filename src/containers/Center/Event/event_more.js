@@ -40,7 +40,7 @@ class event_more extends Component {
                     <div class=" d-flex  container" style={{background:"white", borderRadius:"30px"}}>
                         <div class="row"> 
 
-                            <img src={dn} class="pr-3 pt-3 pb-3 col" style={{ width:"400px", height:"400px",borderRadius:"30px"}} />
+                            <img src={dn} class="pr-3 pt-3 pb-3 col" style={{ width:"200px", height:"350px",borderRadius:"30px"}} />
                             <div class="col align-items-center ">
                                 <h4 class="pt-2">Dã ngoại</h4>
                                 <p  class="w3-sans-serif ">Dã ngoại là một hoạt động đặc biệt ý nghĩa và hữu ích đối với học sinh. Tham gia vào các chuyến dã ngoại không chỉ giúp các em thư giãn sau những giờ học căng thẳng mà còn mang lại nhiều lợi ích giáo dục và phát triển toàn diện.</p>
@@ -51,7 +51,7 @@ class event_more extends Component {
                     <div class=" d-flex  container" style={{background:"white", borderRadius:"30px"}}>
                         <div class="row"> 
 
-                            <img src={dn5} class="pr-3 pt-3 pb-3 col" style={{ width:"380px", height:"400px",borderRadius:"30px"}} />
+                            <img src={dn5} class="pr-3 pt-3 pb-3 col" style={{ width:"200px", height:"350px",borderRadius:"30px"}} />
                             <div class="col align-items-center ">
                                 <h4 class="pt-2">Tết</h4>
                                 <p  class="w3-sans-serif ">Cứ mỗi dịp Tết đến,
@@ -66,10 +66,10 @@ class event_more extends Component {
                     <div class=" d-flex  container" style={{background:"white", borderRadius:"30px"}}>
                         <div class="row"> 
 
-                            <img src={dn6} class="pr-3 pt-3 pb-3 col" style={{ width:"380px", height:"400px",borderRadius:"30px"}} />
+                            <img src={dn6} class="pr-3 pt-3 pb-3 col" style={{ width:"200px", height:"350px",borderRadius:"30px"}} />
                             <div class="col align-items-center ">
-                                <h4 class="pt-2">hallowen</h4>
-                                <p  class="w3-sans-serif ">Dã ngoại là một hoạt động đặc biệt ý nghĩa và hữu ích đối với học sinh. Tham gia vào các chuyến dã ngoại không chỉ giúp các em thư giãn sau những giờ học căng thẳng mà còn mang lại nhiều lợi ích giáo dục và phát triển toàn diện.</p>
+                                <h4 class="pt-2">Halloween</h4>
+                                <p  class="w3-sans-serif ">Halloween là một lễ hội được tổ chức vào ngày 31 tháng 10 hàng năm. Đây là thời điểm chuyển giao giữa mùa hè và mùa đông, được tin rằng là lúc mà ranh giới giữa thế giới người sống và thế giới người chết trở nên mờ nhạt, cho phép các linh hồn và ma quỷ đi lại trên trần gian.</p>
                             </div>
                         </div>
                     </div>

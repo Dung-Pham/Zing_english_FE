@@ -11,6 +11,7 @@ const initialState = {
     started: true,
     language: 'vi',
     systemMenuPath: '/system/user-redux',
+    teacherMenuPath:'/teacher/manage-class-student',
     contentOfConfirmModal: {
         ...initContentOfConfirmModal
     }

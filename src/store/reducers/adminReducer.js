@@ -6,7 +6,8 @@ const initialState = {
     topTeacher: [],
     students:[],
     courses:[],
-    teachers:[]
+    teachers:[],
+    hw:[]
 }
 
 const adminReducer = (state = initialState, action) => {
@@ -60,6 +61,16 @@ const adminReducer = (state = initialState, action) => {
             }
         case actionTypes.FETCH_ALL_COURSE_FAILED:
             state.courses = [];
+            return {
+                ...state,
+            }
+         case actionTypes.FETCH_ALL_HW_SUCCESS:
+            state.hw = action.data
+            return {
+                ...state,
+            }
+        case actionTypes.FETCH_ALL_HW_FAILED:
+            state.hw = []
             return {
                 ...state,
             }

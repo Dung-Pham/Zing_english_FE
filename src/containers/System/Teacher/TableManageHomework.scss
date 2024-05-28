@@ -1,24 +1,24 @@
-#TableManageClassStudent {
+#TableManageHomework {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#TableManageClassStudent td,
-#TableManageClassStudent th {
+#TableManageHomework td,
+#TableManageHomework th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#TableManageClassStudent tr:nth-child(even) {
+#TableManageHomework tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#TableManageClassStudent tr:hover {
+#TableManageHomework tr:hover {
     background-color: #ddd;
 }
 
-#TableManageClassStudent th {
+#TableManageHomework th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;

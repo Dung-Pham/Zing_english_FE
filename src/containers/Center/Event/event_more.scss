@@ -7,7 +7,7 @@
     .event-more-container{
         display:flex;
         flex-direction: column;
-        // width: 1320px;
+         width: 80%;
         margin: 50px 50px;
         gap: 50px;
         .header{ 
@@ -19,6 +19,16 @@
                 font-size: 30px;
                 font-weight: 700;
             }
+        }
+        .container{
+            width: 90%;
+            // margin-bottom: 0px;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px 30px;
+            min-height: 170px ;
         }
         .list{
             width: 100%;

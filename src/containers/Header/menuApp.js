@@ -33,7 +33,7 @@ export const adminMenu = [
 
 export const teacherMenu = [
     
-    {
+    {///teacher/manage-hw
         name:" Quản lí lớp học",
         menus:[
             { 
@@ -43,7 +43,13 @@ export const teacherMenu = [
             {
                 name:"Quản lí hs",
                 link:'/teacher/manage-class-student'
+            },
+            {
+                name:"Quản lí BTVN",
+                link:'/teacher/manage-hw'
             }
+
         ]
     }
+    
 ];

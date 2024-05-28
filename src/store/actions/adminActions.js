@@ -2,7 +2,11 @@ import actionTypes from './actionTypes';
 import { toast } from 'react-toastify'
 import {creatNewUser} from '../../services/userService'
 import{getAllStudents, deleteStudent, editStudent}  from '../../services/studentService'
-import{ getTopTeacher, getAllTeachers,createNewTeacher, editTeacher}  from '../../services/teacherService';
+import{ getTopTeacher, getAllTeachers,
+    createNewTeacher, editTeacher,
+    getAllHW,
+    createNewHW, editHW,
+}  from '../../services/teacherService';
 import{ editCourse, getAllCourse, createNewCourse}  from '../../services/courseService';
 import{ editStaff, getAllStaff, createNewStaff}  from '../../services/staffService';
 
@@ -228,6 +232,86 @@ export const fetchEditTeacherStart = (data) => {
                 type: actionTypes.FETCH_EDIT_TEACHER_FAILED,
             })
             console.log('check fetchEditTeacherStart err: ', e)
+        }
+    }
+}
+//homework
+
+export const getALLHW = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllHW();
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_HW_SUCCESS,
+                    data: res.data
+                })
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_HW_FAILED,
+                })
+            }
+        } catch (e) {
+            console.log('FETCH_ALL_HW_FAILED: ', e)
+            dispatch({
+                type: actionTypes.FETCH_ALL_HW_FAILED,
+            })
+        }
+    }
+}
+
+
+export const createNewHWRedux = (data) => {
+    return async (dispatch, getState) => {
+
+        try {
+            let res = await createNewHW(data)
+            if (res && res.errCode === 0) {
+                toast.success('Creat a new HW success!')
+                dispatch({
+                    type: actionTypes.CREATE_HW_SUCCESS
+                })
+                dispatch(getALLHW())
+            } else {
+                dispatch({
+                    type: actionTypes.CREATE_HW_FAILED
+                })
+                toast.error(res.errMessage)
+            }
+        } catch (e) {
+            dispatch({
+                type: actionTypes.CREATE_HW_FAILED
+            })
+            toast.error('Error!')
+            console.log('check HW err: ', e)
+        }
+    }
+}
+
+
+export const fetchEditHWStart = (data) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await editHW(data);
+            if (res && res.errCode === 0) {
+                toast.success('Edit HW success!')
+                dispatch({
+                    type: actionTypes.FETCH_EDIT_HW_SUCCESS,
+                })
+                
+                dispatch(getALLHW())
+            } else {
+                toast.error('Edit HW failed!')
+                dispatch({
+                    type: actionTypes.FETCH_EDIT_HW_FAILED,
+                })
+            }
+        } catch (e) {
+            toast.error('Edit HW failed!')
+            dispatch({
+                type: actionTypes.FETCH_EDIT_HW_FAILED,
+            })
+            console.log('check fetchEditHWStart err: ', e)
         }
     }
 }

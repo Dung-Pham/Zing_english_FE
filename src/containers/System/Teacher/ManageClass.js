@@ -51,7 +51,7 @@ class ManageClass extends Component {
                 </div>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-6 form-group'>
+                        {/* <div className='col-6 form-group'>
                             <label>
                                 Tên Lớp 
                             </label>
@@ -88,7 +88,7 @@ class ManageClass extends Component {
                                 Lưu thông tin
                             </button>
 
-                        </div>
+                        </div> */}
                         <TableManageClass/>
                     </div>
                 </div>

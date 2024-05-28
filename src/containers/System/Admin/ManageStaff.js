@@ -109,7 +109,8 @@ class ManageStaff extends Component {
     handleEditStaffFromParent = async (user) => {
         console.log(user.UserId);
 		let tk= await getUserFromStaff(user.UserId);
-        console.log("ch",tk)
+        let res=  getUserFromStaff(user.UserId);
+        console.log("ch",res)
 		if(tk){
 		this.setState({
 			isOpenModalEditStaff: true,
@@ -126,17 +127,7 @@ class ManageStaff extends Component {
 		})}
 	}
     render() {
-        // console.log('check state: ', this.state)
-        // console.log('check props: ', this.props)
-        let {
-            StaffName,
-            DateBirth,
-            Address,
-            Email,
-            PhoneNumber,
-            Password,
-            UserName
-		} = this.state;
+        
         return (
             <div className='manage-staff-containner'>
                 <div className='m-s-title'>

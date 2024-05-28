@@ -188,7 +188,7 @@ class UserRedux extends Component {
                         	className='btn btn-primary px-3'
                         	onClick={() => this.handleAddNewUser()}>
                         		<i className="fas fa-user-plus add-user"></i>
-                       			 Add new user
+                       			 Thêm học sinh
                     		</button>
                 		</div>
 						<div className="row">

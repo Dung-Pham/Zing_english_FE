@@ -102,9 +102,8 @@ class TableManageClass extends Component {
                                     
                                     <td>
                                         <button className=' ml-5'
-                                            onClick={() => this.handleEditUser(item.ClassId)}>
+                                            >
                                                Xem lớp
-                                                <a href="http://localhost:3000/teacher/manage-class-student">Xem lớp </a>
                                         
                                         </button>
                                         
